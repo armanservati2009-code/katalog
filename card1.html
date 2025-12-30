@@ -7,6 +7,18 @@
 
     <style>
         
+        @media (max-width: 768px) {
+    p {
+    font-size: 14px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    p {
+    flex-direction: column;
+    }
+    }
+        
     html {
         scroll-behavior: smooth;
     }
@@ -50,17 +62,6 @@
     }
 
      p {
-    @media (max-width: 768px) {
-    .card {
-    font-size: 14px;
-    }
-    }
-
-    @media (max-width: 480px) {
-    .cards {
-    flex-direction: column;
-    }
-    }
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
@@ -150,5 +151,6 @@
 </body>
 
 </html>
+
 
 
