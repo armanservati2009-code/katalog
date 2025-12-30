@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        padding: 20;
+        background: #fd960ff6;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        padding: 0px 20px;
+        scroll-behavior: smooth;
+        scroll-padding-top: 40px;
+        scroll-padding-bottom: 40px;
+        scroll-padding: 50px 0;
+        scroll-snap-type: y proximity;
+        height: 100vh;
+        overflow-y: scroll;
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+    }
+    
+    .container::-webkit-scrollbar {
+    display: none;
+    }
+    
+    h2 , p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    h2 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+     p {
+        font-size: 18px;
+        white-space: pre-wrap;
+        line-height: 30px;
+        max-height: 3000px;
+        width: 500px;
+        scroll-snap-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: #ffffff;
+        border-radius: 30px 30px 0 0;
+        padding: 30px;
+        box-shadow:
+        0 0 20px 2px rgba(0,0,0,0.5),
+        inset 0px 0px 23px rgb(253, 175, 6);
+     }
+
+    .tozih {
+        font-size: 20px;
+        white-space: pre-wrap;
+    }
+
+     img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 20px;
+        display: block;
+        box-shadow:
+        0 0 20px 2px rgba(0,0,0,1.35),
+        inset 0px 0px 23px rgba(0, 0, 0, 0.507);
+    }
+
+    .back {
+        line-height: 25px;
+        border-radius: 0 0 25px 25px;
+        padding: 20px 256.5px;
+        text-decoration: none;
+        background-color:#ffb14afb;
+        color: black;
+        box-shadow:
+        0 0 20px 2px rgba(0,0,0,0.35),
+        inset 0px 0px 23px rgba(0, 0, 0, 0);
+    }
+
+
+</style>
+</head>
+<body>
+    
+    <div class="card">
+        <h2>بندکشی استخری نانو</h2>
+        
+        <p class="tozih"></p>
+        <div><a href="./index.html" class="back">برگشت</a></div><br>
+        <br>
+        <img src="./image1/img1.png" alt="image1/img1" onerror="this.style.display='none'">
+        <br>
+        <img src="./image1/img2.png" alt="image1/img2" onerror="this.style.display='none'">
+        <br>
+        <img src="./image1/img3.png" alt="image1/img3" onerror="this.style.display='none'">
+        <br>
+        <img src="./image1/img4.png" alt="image1/img4" onerror="this.style.display='none'">
+        <br>
+        <img src="./image1/img5.png" alt="image1/img5" onerror="this.style.display='none'">
+        <br>
+        <img src="./image1/img6.png" alt="image1/img6" onerror="this.style.display='none'">
+        <br>
+        <img src="./image1/img7.png" alt="image1/img7" onerror="this.style.display='none'">
+        <br>
+        <img src="./image1/img8.png" alt="image1/img8" onerror="this.style.display='none'">
+        <br>
+        <img src="./image1/img9.png" alt="image1/img9" onerror="this.style.display='none'">
+        <br>
+        <img src="./image1/img10.png" alt="image1/img10" onerror="this.style.display='none'">
+        <br>
+    </div>
+
+    <script>
+        fetch('description1.txt')
+        .then(res => res.text())
+        .then(data => {
+          document.querySelector('.card .tozih').innerText = data;
+        })
+    </script>
+</body>
+</html>
